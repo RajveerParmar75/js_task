@@ -63,6 +63,14 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
+                <input
+                  type="hidden"
+                  name=""
+                  class="form-control"
+                  id="item_id"
+                  required
+                  pattern=".{4,}"
+                />
                 <label class="col-form-label">name:</label>
                 <input
                   type="text"
@@ -110,6 +118,84 @@
               Close
             </button>
             <button type="submit" class="btn btn-primary" onclick="add_data()">
+              Send message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Data</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="col-form-label">name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name_update"
+                  required
+                  pattern=".{4,}"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">description:</label>
+                <textarea
+                  class="form-control"
+                  id="description_update"
+                  pattern=".{4,}"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">prise:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="prise_update"
+                  required
+                  pattern="^\d+(\.\d{1,2})?$"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">select image</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="image_update"
+                  accept=".jpg, .jpeg, .png, .gif"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="add_update_data()"
+            >
               Send message
             </button>
           </div>
